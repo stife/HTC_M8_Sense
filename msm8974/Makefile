@@ -353,7 +353,7 @@ MODFLAGS        = -DMODULE \
                   -mtune=cortex-a15 \
 				  -fgcse-las \
 				  -fpredictive-commoning \
-                  -O3
+                  -Ofast
 
 CFLAGS_MODULE   = $(MODFLAGS)
 AFLAGS_MODULE   = $(MODFLAGS)
@@ -370,7 +370,7 @@ CFLAGS_KERNEL   = -mfpu=neon-vfpv4 \
 				  -fsingle-precision-constant
 
 ifeq ($(ENABLE_GRAPHITE),true)
-CFLAGS_KERNEL	+= -O3 -munaligned-access -Wall -Wno-maybe-uninitialized -fgcse-lm -fgcse-sm -fsingle-precision-constant -fforce-addr -fsched-spec-load -mtune=cortex-a15 -mcpu=cortex-a15 -marm -mfpu=neon-vfpv4 -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fpredictive-commoning -ffast-math -fgraphite -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block -fomit-frame-pointer -fgcse-las -Wmissing-prototypes -Wstrict-prototypes
+CFLAGS_KERNEL	+= -Ofast -munaligned-access -Wall -Wno-maybe-uninitialized -fgcse-lm -fgcse-sm -fsingle-precision-constant -fforce-addr -fsched-spec-load -mtune=cortex-a15 -mcpu=cortex-a15 -marm -mfpu=neon-vfpv4 -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -fpredictive-commoning -ffast-math -fgraphite -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block -fomit-frame-pointer -fgcse-las -Wmissing-prototypes -Wstrict-prototypes
 endif
 AFLAGS_KERNEL	=
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
