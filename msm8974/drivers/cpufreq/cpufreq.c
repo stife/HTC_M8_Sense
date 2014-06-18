@@ -552,7 +552,7 @@ cpufreq_freq_attr_rw(scaling_max_freq);
 cpufreq_freq_attr_rw(scaling_governor);
 cpufreq_freq_attr_rw(scaling_setspeed);
 #ifdef CONFIG_MSM_CPU_VOLTAGE_CONTROL
-cpufreq_freq_attr_rw(UV_mV_table);
+		&UV_mV_table.attr,
 #endif
 
 static struct attribute *default_attrs[] = {
