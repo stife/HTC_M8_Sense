@@ -194,7 +194,7 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/ -e s/sun4u/sparc64/ \
 export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		?= $(SUBARCH)
 ARCH		:= arm
-CROSS_COMPILE	:= /home/holyangel/android/HTC_M8_Sense/msm8974/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.06/bin/arm-cortex_a15-linux-gnueabihf-
+CROSS_COMPILE	:= /home/android/android/HTC_M8_Sense/arm-cortex_a15-linux-gnueabihf-linaro_4.9.1-2014.06/bin/arm-cortex_a15-linux-gnueabihf-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
